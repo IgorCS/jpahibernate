@@ -1,5 +1,7 @@
 package com.algaworks.curso.jpa2.modelo;
 
+import java.beans.Transient;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -16,6 +18,21 @@ public class ModeloCarro {
 
 	private Long codigo;
 	private String descricao;
+	private String nomeCarro;
+	/**
+	 * @return the nomeCarro
+	 */
+	public String getNomeCarro() {
+		return nomeCarro;
+	}
+
+	/**
+	 * @param nomeCarro the nomeCarro to set
+	 */
+	public void setNomeCarro(String nomeCarro) {
+		this.nomeCarro = nomeCarro;
+	}
+
 	private Fabricante fabricante;
 	private Categoria categoria;
 	private TipoCombustivel tipoCombustivel;
@@ -23,9 +40,8 @@ public class ModeloCarro {
 	
 	@Column(name = "tipo_combustivel", nullable = false)
 	@Enumerated(EnumType.STRING)
-	//@Enumerated(EnumType.ORDINAL)
 	public TipoCombustivel getTipoCombustivel() {
-		return tipoCombustivel;
+	return tipoCombustivel;
 	}
 
 	public void setTipoCombustivel(TipoCombustivel tipoCombustivel) {
@@ -42,13 +58,24 @@ public class ModeloCarro {
 		this.codigo = codigo;
 	}
 
+	@Transient
+	 //@ManyToOne(fetch = FetchType.EAGER)
+	//@JoinColumn(name = "codigo_fabricante")
 	public String getDescricao() {
-		return descricao;
+		
+	return  
+	         this.getNomeCarro()
+	 + "/ " +this.getCategoria()
+	 +"/ "  +this.getTipoCombustivel();
+	//+ " por apenas 30000" ;
 	}
-
+	
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	
+	
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "codigo_fabricante")

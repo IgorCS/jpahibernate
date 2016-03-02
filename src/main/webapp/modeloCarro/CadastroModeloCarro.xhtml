@@ -39,8 +39,8 @@
 						itemLabel="#{fabricante.nome}" itemValue="#{fabricante}"/>
 	    		</p:selectOneMenu>
 	    		
-	    		<p:outputLabel value="Modelo" for="modelo"/>
-	    		<p:inputText id="modelo" size="60" maxlength="80" value="#{cadastroModeloCarroBean.modeloCarro.descricao}"/>
+	    		<p:outputLabel value="Nome do Carro" for="nomeCarro"/>
+	    		<p:inputText id="nomeCarro" size="60" maxlength="80" value="#{cadastroModeloCarroBean.modeloCarro.nomeCarro}"/>
 	    	
 	    		<p:outputLabel value="Categoria" for="categoria"/>
 	    		<p:selectOneMenu id="categoria" value="#{cadastroModeloCarroBean.modeloCarro.categoria}">

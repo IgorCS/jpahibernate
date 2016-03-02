@@ -24,7 +24,7 @@
 	    		<p:column headerText="Código" style="text-align: center; width: 100px">
 	    			<h:outputText value="#{modeloCarro.codigo}" />
 	    		</p:column>
-	    		<p:column headerText="Modelo">
+	    		<p:column headerText="Decrições do Veicúlo">
 	    			<h:outputText value="#{modeloCarro.descricao}" />
 	    		</p:column>
 	    		<p:column headerText="Fabricante">
@@ -32,6 +32,9 @@
 	    		</p:column>
 	    		<p:column headerText="Categoria">
 	    			<h:outputText value="#{modeloCarro.categoria}" />
+	    		</p:column>
+	    		<p:column headerText="Tipo de Combústivel">
+	    			<h:outputText value="#{modeloCarro.tipoCombustivel}" />
 	    		</p:column>
 	    		<p:column style="width: 100px; text-align: center">
 		    		<p:button outcome="CadastroModeloCarro" icon="ui-icon-pencil" title="Editar">

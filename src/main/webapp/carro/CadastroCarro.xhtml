@@ -35,7 +35,7 @@
 	    		<p:selectOneMenu id="modeloCarro" value="#{cadastroCarroBean.carro.modelo}">
 	    			<f:selectItem itemLabel="Selecione o modelo" />
 	    			<f:selectItems value="#{cadastroCarroBean.modelosCarros}" var="modelosCarros" 
-						itemLabel="#{modelosCarros.descricao}" itemValue="#{modelosCarros}"/>
+						itemLabel="#{modelosCarros.nomeCarro}" itemValue="#{modelosCarros}"/>
 	    		</p:selectOneMenu>
 			    
 			    <p:outputLabel value="Placa" for="placa"/>

@@ -14,12 +14,13 @@ public class BuscandoVeiculo1 {
 		//Carro veiculo = manager.getReference(Carro.class, 1L);
 		
 		
-		VeiculoId id = new VeiculoId("ABC-1235", "Altos");
+		VeiculoId id = new VeiculoId("ABC-0002", "teste2");
 		Veiculo veiculo = manager.find(Veiculo.class, id);
 		System.out.println("Placa: " + veiculo.getChaveComposta().getPlaca().toString());
 		System.out.println("Cidade: " + veiculo.getChaveComposta().getCidade());
 		System.out.println("Fabricante: " + veiculo.getFabricante());
 		System.out.println("Modelo: " + veiculo.getModelo());
+		System.out.println("DESCRIÇÃO: "+veiculo.getDescricao());
 		/*System.out.println("Fabricante: " + veiculoBusca.getValorDiaria());
 		System.out.println("Modelo: " + veiculoBusca.getModelo());
 		System.out.println("Buscou veículo. Será que já executou o SELECT?");

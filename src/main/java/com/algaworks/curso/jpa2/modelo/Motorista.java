@@ -12,6 +12,7 @@ public class Motorista extends Pessoa {
 	public String getNumeroCNH() {
 		return numeroCNH;
 	}
+	
 	public void setNumeroCNH(String numeroCNH) {
 		this.numeroCNH = numeroCNH;
 	}

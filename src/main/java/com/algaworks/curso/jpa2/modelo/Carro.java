@@ -38,7 +38,7 @@ public class Carro {
 	private Long codigo;
 	private String placa;
 	private String cor;
-	private String chassi;
+	private String renavan;
 	private BigDecimal valorDiaria;
 	public ModeloCarro modelo;
 	private List<Acessorio> acessorios;
@@ -81,11 +81,11 @@ public class Carro {
 		this.cor = cor;
 	}
 	
-	public String getChassi() {
-		return chassi;
+	public String getRenavan() {
+		return renavan;
 	}
-	public void setChassi(String chassi) {
-		this.chassi = chassi;
+	public void setRenavan(String renavan) {
+		this.renavan = renavan;
 	}
 	
 	public BigDecimal getValorDiaria() {

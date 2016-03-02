@@ -9,7 +9,7 @@ public class BuscandoVeiculo2 {
 
 	public static void main(String[] args) {
 		EntityManager manager = JpaUtil.getEntityManager();
-		Carro veiculo = manager.getReference(Carro.class, 1L);
+		Carro veiculo = manager.getReference(Carro.class, 2L);
 		System.out.println("BuscandoVeiculo2 de código " + veiculo.getCodigo() 
 		+ " é um " + veiculo.getModelo().getDescricao());
 		manager.close();

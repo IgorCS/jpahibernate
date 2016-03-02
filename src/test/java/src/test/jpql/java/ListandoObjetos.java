@@ -17,8 +17,8 @@ public class ListandoObjetos {
 		Query sql = manager.createQuery("from Carro");
 		List<Carro> carro = sql.getResultList();
 		for (Carro veiculo : carro) {
-		System.out.println(veiculo.getCodigo() + " - "
-		+ veiculo.getChassi() + " "
+		System.out.println(" RENAVAN: "
+		+ veiculo.getRenavan() + " "
 		+ veiculo.getPlaca() + ", Descrição "
 		+ veiculo.getCor() + "/"
 		+ veiculo.getFoto() + " por "
